@@ -1,4 +1,4 @@
-h1 {
+.Pokedex {
   text-align: center;
 }
 
@@ -6,4 +6,12 @@ h1 {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+}
+
+.Pokedex-winner {
+  color: green;
+}
+
+.Pokedex-loser {
+  color: red;
 }
