@@ -3,6 +3,8 @@ import Game from "./Game";
 import Game2 from "./Game2";
 import Demo from "./Demo";
 import Rando from "./Rando";
+import Button from "./Button";
+import BrokenClick from "./BrokenClick";
 import "./App.css";
 
 function App() {
@@ -12,6 +14,8 @@ function App() {
       <Game2 />
       <Demo animal="Bobcat" food="Pineapple" />
       <Rando maxNum={7} />
+      <Button />
+      <BrokenClick />
     </div>
   );
 }
