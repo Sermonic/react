@@ -6,11 +6,13 @@ import Rando from "./Rando";
 import Button from "./Button";
 import BrokenClick from "./BrokenClick";
 import BrokenClick2 from "./BrokenClick2";
+import Clicker from "./Clicker";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
+      <Clicker />
       <Game />
       <Game2 />
       <Demo animal="Bobcat" food="Pineapple" />
