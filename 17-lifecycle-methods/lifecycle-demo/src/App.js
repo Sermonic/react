@@ -7,8 +7,9 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <GithubUserInfo username="facebook" />
-      <GithubUserInfo username="sermonic" />
+      <ZenQuote />
+      {/* <GithubUserInfo username="facebook" />
+      <GithubUserInfo username="sermonic" /> */}
     </div>
   );
 }
