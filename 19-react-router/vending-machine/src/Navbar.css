@@ -1,0 +1,23 @@
+.Navbar {
+  background: rgba(69, 90, 100, 1);
+  width: 100%;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.Navabr a.Navbar-active {
+  color: #ffffff;
+}
+
+.Navbar a {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.Navbar a:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 10px;
+}

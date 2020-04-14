@@ -1,10 +1,21 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import Message from "./Message";
 
 class Sardines extends Component {
-  redner() {
+  render() {
     return (
-      <div>
-        <h1>Sardines</h1>
+      <div
+        style={{
+          height: "100vh",
+          backgroundImage:
+            "url('https://media.giphy.com/media/tVk4w6EZ7eGNq/giphy.gif')",
+        }}
+      >
+        <Message>
+          <h1>Sardines</h1>
+          <Link to="/">Go Back</Link>
+        </Message>
       </div>
     );
   }
