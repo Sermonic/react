@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
 import "./Food.css";
 
 class Food extends Component {
@@ -8,8 +9,14 @@ class Food extends Component {
 
     return (
       <div className="Food">
-        <h1>i love to eat {name}</h1>
-        <img src={url} alt={name} />
+        {/\d/.test(name) ? (
+          <Redirect to="/" />
+        ) : (
+          <div>
+            <h1>i love to eat {name}</h1>
+            <img src={url} alt={name} />
+          </div>
+        )}
       </div>
     );
   }
