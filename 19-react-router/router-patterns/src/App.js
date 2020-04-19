@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
+import Navbar from "./Navbar";
 import Food from "./Food";
 import Meal from "./Meal";
 import FoodSearch from "./FoodSearch";
@@ -14,6 +15,7 @@ function App() {
 
       {/* This version using render is less clean but more explicit */}
       {/* and you can pass in your own additional props */}
+      <Navbar />
       <Switch>
         <Route
           exact
