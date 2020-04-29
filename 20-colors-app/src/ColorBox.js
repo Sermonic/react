@@ -10,7 +10,7 @@ const styles = {
   ColorBox: {
     width: "20%",
     height: (props) => (props.showingFullPalette ? "25%" : "50%"),
-    margin: "0",
+    margin: "0 auto",
     display: "inline-block",
     position: "relative",
     cursor: "pointer",
@@ -123,7 +123,7 @@ const styles = {
       textTransform: "uppercase",
     },
     "& p": {
-      fontSize: "1rem",
+      fontSize: "2rem",
       fontWeight: "100",
     },
   },
