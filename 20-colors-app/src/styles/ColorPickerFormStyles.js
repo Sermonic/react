@@ -10,7 +10,7 @@ const styles = {
   },
   colorNameInput: {
     width: "100%",
-    height: "70px",
+    height: "80px",
     marginTop: "1rem",
   },
 };
