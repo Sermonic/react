@@ -1,12 +1,18 @@
 import sizes from "./sizes";
+import bg from "./bg.svg";
 
 export default {
   root: {
-    backgroundColor: "blue",
     height: "100vh",
     display: "flex",
     alignItems: "flex-start",
     justifyContent: "center",
+    backgroundColor: "#1d2228",
+    backgroundImage: `url(${bg})`,
+    overflow: "scroll",
+  },
+  heading: {
+    fontSize: "2rem",
   },
   container: {
     width: "50%",
@@ -15,7 +21,7 @@ export default {
     flexDirection: "column",
     flexWrap: "wrap",
     [sizes.down("xl")]: {
-      width: "80%",
+      width: "60%",
     },
     [sizes.down("xs")]: {
       width: "60%",
