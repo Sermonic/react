@@ -6,6 +6,7 @@ const styles = {
   addColor: {
     width: "100%",
     padding: "1rem",
+    marginBottom: "1rem",
     fontSize: "1rem",
   },
   colorNameInput: {
