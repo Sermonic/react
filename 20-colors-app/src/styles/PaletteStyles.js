@@ -1,3 +1,5 @@
+import sizes from "./sizes";
+
 export default {
   Palette: {
     height: "100vh",
@@ -10,11 +12,11 @@ export default {
   goBack: {
     width: "20%",
     height: "50%",
-    margin: "0",
+    margin: "0 auto",
     display: "inline-block",
     position: "relative",
     cursor: "pointer",
-    marginBottom: "-4px",
+    marginBottom: "-5px",
     opacity: 1,
     backgroundColor: "black",
     "& a": {
@@ -36,6 +38,18 @@ export default {
       border: "none",
       cursor: "pointer",
       textDecoration: "none",
+    },
+    [sizes.down("lg")]: {
+      width: "25%",
+      height: "33.333%",
+    },
+    [sizes.down("md")]: {
+      width: "50%",
+      height: "20%",
+    },
+    [sizes.down("xs")]: {
+      width: "100%",
+      height: "15%",
     },
   },
 };
