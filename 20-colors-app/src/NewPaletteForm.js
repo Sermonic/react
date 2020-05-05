@@ -11,6 +11,7 @@ import Button from "@material-ui/core/Button";
 import DraggableColorList from "./DraggableColorList";
 import PaletteFormNav from "./PaletteFormNav";
 import ColorPickerForm from "./ColorPickerForm";
+import seedColors from "./seedColors";
 import styles from "./styles/NewPaletteFormStyles";
 
 class NewPaletteForm extends Component {
@@ -22,7 +23,7 @@ class NewPaletteForm extends Component {
     super(props);
     this.state = {
       open: true,
-      colors: this.props.palettes[0].colors,
+      colors: seedColors[0].colors,
     };
     this.addNewColor = this.addNewColor.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -77,7 +78,7 @@ class NewPaletteForm extends Component {
   }
 
   addRandomColor() {
-    const allColors = this.props.palettes.map((p) => p.colors).flat();
+    const allColors = seedColors.map((p) => p.colors).flat();
     const randomNumber = Math.floor(Math.random() * allColors.length);
     const randomColor = allColors[randomNumber];
     this.setState({ colors: [...this.state.colors, randomColor] });
@@ -113,7 +114,7 @@ class NewPaletteForm extends Component {
           </div>
           <Divider />
           <div className={classes.container}>
-            <Typography variant="h4" gutterBottom>
+            <Typography variant="h5" gutterBottom>
               Design Your Palette
             </Typography>
             <div className={classes.buttons}>
