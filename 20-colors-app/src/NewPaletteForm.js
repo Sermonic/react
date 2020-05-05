@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import clsx from "clsx";
+import arrayMove from "array-move";
 import { withStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import Typography from "@material-ui/core/Typography";
@@ -7,7 +8,6 @@ import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import Button from "@material-ui/core/Button";
-import arrayMove from "array-move";
 import DraggableColorList from "./DraggableColorList";
 import PaletteFormNav from "./PaletteFormNav";
 import ColorPickerForm from "./ColorPickerForm";
@@ -77,7 +77,6 @@ class NewPaletteForm extends Component {
   }
 
   addRandomColor() {
-    // pick random color from existing palettes
     const allColors = this.props.palettes.map((p) => p.colors).flat();
     const randomNumber = Math.floor(Math.random() * allColors.length);
     const randomColor = allColors[randomNumber];
@@ -154,7 +153,7 @@ class NewPaletteForm extends Component {
             removeColor={this.removeColor}
             axis="xy"
             onSortEnd={this.onSortEnd}
-            // distance={20}
+            distance={20}
           />
         </main>
       </div>
@@ -162,4 +161,4 @@ class NewPaletteForm extends Component {
   }
 }
 
-export default withStyles(styles, { withTheme: true })(NewPaletteForm);
+export default withStyles(styles)(NewPaletteForm);

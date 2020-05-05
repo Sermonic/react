@@ -6,7 +6,6 @@ import styles from "./styles/MiniPaletteStyles";
 class MiniPalette extends PureComponent {
   constructor(props) {
     super(props);
-    this.state = {};
     this.deletePalette = this.deletePalette.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
@@ -22,7 +21,7 @@ class MiniPalette extends PureComponent {
 
   render() {
     const { classes, paletteName, emoji, colors } = this.props;
-    console.log("RENDERING:", paletteName);
+
     const miniColorBoxes = colors.map((color) => (
       <div
         className={classes.miniColor}
