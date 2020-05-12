@@ -5,7 +5,7 @@ export const ThemeContext = React.createContext();
 export class ThemeProvider extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { idDarkMode: true };
+    this.state = { isDarkMode: true };
   }
   render() {
     return (
