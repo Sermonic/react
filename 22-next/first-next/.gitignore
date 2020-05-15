@@ -1,12 +1,12 @@
+# Dependency directories
+/node_modules
+
 # next.js build output
-.next
+/.next
 
 # dotenv environment variables file
 .env
 .env.build
-
-# Dependency directories
-node_modules/
 
 # Logs
 npm-debug.log*
