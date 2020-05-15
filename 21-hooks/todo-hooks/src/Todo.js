@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import useToggleState from "./hooks/useToggleState";
-import { TodosContext } from "./contexts/todos.context";
+import { DispatchContext } from "./contexts/todos.context";
 import { ListItem } from "@material-ui/core";
 import { ListItemText } from "@material-ui/core";
 import { Checkbox } from "@material-ui/core";
@@ -12,7 +12,7 @@ import EditTodoForm from "./EditTodoForm";
 
 function Todo({ id, task, completed }) {
   const [isEditing, toggle] = useToggleState(false);
-  const { dispatch } = useContext(TodosContext);
+  const dispatch = useContext(DispatchContext);
 
   return (
     <ListItem style={{ height: "64px" }}>
