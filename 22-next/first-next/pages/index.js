@@ -1,10 +1,12 @@
-const Page = ({ users }) => {
+import axios from "axios";
+
+const Page = ({ posts }) => {
   return (
     <div>
       <h1>Index Page!</h1>
       <ul>
-        {users.map((user) => (
-          <li key={user.id}>{user.name}</li>
+        {posts.map((post) => (
+          <li key={post.id}>{post.title}</li>
         ))}
       </ul>
     </div>
@@ -12,9 +14,9 @@ const Page = ({ users }) => {
 };
 
 Page.getInitialProps = async () => {
-  const res = await fetch("https://jsonplaceholder.typicode.com/users");
-  const json = await res.json();
-  return { users: json };
+  const res = await axios.get("https://jsonplaceholder.typicode.com/posts");
+  const { data } = res;
+  return { posts: data };
 };
 
 export default Page;
