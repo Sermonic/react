@@ -1,8 +1,9 @@
-const ContactPage = () => {
-  console.log("Running Contact Page!");
+import Navbar from "../components/Navbar";
 
+const ContactPage = () => {
   return (
     <div>
+      <Navbar />
       <h1>Contact Page</h1>
       <p>Do not contact us never</p>
     </div>
